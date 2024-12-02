@@ -1,0 +1,213 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffc0cb;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 20px;
+}
+
+/* Login Screen Styling */
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  padding: 30px;
+}
+
+#password-input {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+/* Main Site Styling after Login */
+#main-site {
+  display: none;
+  background: #ff69b4; /* Solid pink */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#gift-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#gift-box {
+  width: 350px;  /* Base size */
+  height: 370px; /* Base size */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+#gift-front, #gift-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#gift-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#gift-back {
+  background-color: #ffeb3b;
+  padding: 10px;
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+}
+
+.message-inside h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: #ff69b4;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #ffeb3b;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #fbc02d;
+  transform: scale(1.05);
+}
+
+/* Confetti and Hearts Animation */
+#confetti, #hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.confetti, .heart {
+  position: absolute;
+  opacity: 0;
+  animation: fall 2s infinite ease-in;
+}
+
+.heart {
+  font-size: 30px;
+  color: red;
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+}
+
+/* Confetti falling animation */
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* Media Queries for iPhone 13/14 (portrait) */
+@media (max-width: 430px) {  /* iPhone 13/14 screen size */
+  h1 {
+    font-size: 30px; /* Reduce the font size of the heading */
+  }
+
+  #gift-box {
+    width: 350px; /* Make the gift box larger */
+    height: 450px; /* Increase the height as well */
+  }
+
+  .message-inside h2 {
+    font-size: 18px; /* Adjust the message font size */
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Media Queries for smaller screens like iPhone 7/8 */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 26px;  /* Slightly smaller font */
+  }
+
+  #gift-box {
+    width: 280px; /* Adjust size for smaller screens */
+    height: 400px;
+  }
+
+  .message-inside h2 {
+    font-size: 16px;  /* Adjust the message font size */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
