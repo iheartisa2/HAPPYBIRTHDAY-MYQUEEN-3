@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Mommy :3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <h2>Enter Password to Access the Birthday Surprise</h2>
+    <input type="password" id="password-input" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Login</button>
+  </div>
+
+  <!-- Main Content after Login -->
+  <div id="main-site" style="display: none;">
+    <h1>Happy Birthday Mommy! :3</h1>
+    <div id="gift-container">
+      <!-- The Gift Box -->
+      <div id="gift-box">
+        <div id="gift-front">
+          <img src="HAPPYBIRTHDAYMOMMY.jpg" alt="Gift Front" />
+        </div>
+        <div id="gift-back">
+          <div class="message-inside">
+            <h2>
+              Happy Birthday to my beautiful mommy :3! <br>
+              You fill my life with so much joy, love, and happiness, and I feel so incredibly lucky to be yours. <br>
+              You’re my heart, my world, and my everything. I love you more than words can express, forever and always 💖
+            </h2>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="open-btn" onclick="toggleCard()">Flip the Card</button>
+  </div>
+
+  <!-- Confetti and Hearts Container -->
+  <div id="confetti"></div>
+  <div id="hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
