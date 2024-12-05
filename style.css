@@ -202,11 +202,6 @@ button:hover {
   }
 
   .message-inside h2 {
-    font-size: 16px;  /* Adjust the message font size */
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 16px; /* Scale down text */
   }
 }
