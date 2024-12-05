@@ -27,8 +27,8 @@ function createConfettiAndHearts() {
   for (let i = 0; i < 20; i++) {
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
-    confetti.style.left = ${Math.random() * 100}%;
-    confetti.style.animationDuration = ${Math.random() * 1 + 1}s;
+    confetti.style.left = `${Math.random() * 100}%`;
+    confetti.style.animationDuration = `${Math.random() * 1 + 1}s`;
     document.getElementById('confetti').appendChild(confetti);
   }
 
@@ -37,9 +37,8 @@ function createConfettiAndHearts() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.textContent = '❤️';
-    heart.style.left = ${Math.random() * 100}%;
-    heart.style.animationDuration = ${Math.random() * 1 + 1}s;
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.animationDuration = `${Math.random() * 1 + 1}s`;
     document.getElementById('hearts').appendChild(heart);
   }
 }
-
