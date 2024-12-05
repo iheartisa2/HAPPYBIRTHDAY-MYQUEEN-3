@@ -1,5 +1,6 @@
 let isCardFlipped = false;
 
+// Function to check the entered password
 function checkPassword() {
   const password = document.getElementById('password-input').value;
   if (password === 'rafxisa') {
@@ -11,6 +12,7 @@ function checkPassword() {
   }
 }
 
+// Function to toggle the gift card flip effect
 function toggleCard() {
   const giftBox = document.getElementById('gift-box');
   if (isCardFlipped) {
@@ -22,6 +24,7 @@ function toggleCard() {
   isCardFlipped = !isCardFlipped;
 }
 
+// Function to create confetti and hearts animation
 function createConfettiAndHearts() {
   // Create Confetti
   for (let i = 0; i < 20; i++) {
